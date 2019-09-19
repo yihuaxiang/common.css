@@ -1,0 +1,51 @@
+/* nodata */
+.cm-nodata {
+  background: url("https://common-statics.oss-cn-beijing.aliyuncs.com/images/nodata-bg.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+}
+
+/* loading */
+a[class*=btn].cm-loading,
+label[class*=btn].cm-loading,
+button[class*=btn].cm-loading,
+div.cm-loading{
+  position: relative;
+}
+a[class*=btn].cm-loading::first-line,
+label[class*=btn].cm-loading::first-line,
+button[class*=btn].cm-loading::first-line,
+div.cm-loading::first-line{
+  color: transparent;
+}
+a[class*=btn].cm-loading::before,
+label[class*=btn].cm-loading::before,
+button[class*=btn].cm-loading::before,
+div.cm-loading::before{
+  width: 4px; height: 4px;
+  margin: auto;
+  content: '';
+  -webkit-animation: spinZoom 1s steps(8) infinite;
+  animation: spinZoom 1s steps(8) infinite;
+  border-radius: 100%;
+  box-shadow: 0 -10px 0 1px currentColor, 10px 0 currentColor, 0 10px currentColor, -10px 0 currentColor, -7px -7px 0 .5px currentColor, 7px -7px 0 1.5px currentColor, 7px 7px currentColor, -7px 7px currentColor;
+  /* center */
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+/* loading动画 */
+@-webkit-keyframes spinZoom {
+  0% {
+    -webkit-transform: scale(.75) rotate(0);
+  }
+  100% {
+    -webkit-transform: scale(.75) rotate(360deg);
+  }
+}
+@keyframes spinZoom {
+  0% {
+    transform: scale(.75) rotate(0);
+  }
+  100% {
+    transform: scale(.75) rotate(360deg);
+  }
+}
+
